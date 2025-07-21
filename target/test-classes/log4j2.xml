@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Step 1 to add log file with xml code -->
+
+
+
+<Configuration status="warn">
+
+<!-- Here basePath is a variable where we specified current location ./logs (./ -> means current project and logs is a folder name) -->
+
+  <Properties>
+    <Property name="basePath">./logs</Property>
+  </Properties>
+
+  <Appenders>
+    <Console name="Console" target="$SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+
+<!-- Here automation.log is the name of the file in which we storing the logs -->
+<!-- Here filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log" is written when the logs exceeds 1 file, rest of the records saves with same name with timestap as given-->
+
+    <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SS} [%t] %-5level %logger{36} - %msg%n"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="5000"/>
+      </Policies>
+    </RollingFile>
+  </Appenders>
+
+  <Loggers>
+    <Root level="Debug"><!--> Here you can use multiple log levels All < Trace < Debug < Info < Wran < Error < Fatal < Off -->
+      <AppenderRef ref="Console"/> 
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>
