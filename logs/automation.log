@@ -1,0 +1,6 @@
+11:52:31.709 [main] INFO  testCases.TC001_AccountRegistration5 - ***** Starting TC001_AccountRegistration5 *****
+11:52:31.936 [main] INFO  testCases.TC001_AccountRegistration5 - Clicked on MyAccount Link
+11:52:32.720 [main] INFO  testCases.TC001_AccountRegistration5 - Clicked on Register Link
+11:52:32.732 [main] INFO  testCases.TC001_AccountRegistration5 - Providing customer details
+11:52:37.203 [main] INFO  testCases.TC001_AccountRegistration5 - Validated Expected Message
+11:52:37.277 [main] INFO  testCases.TC001_AccountRegistration5 - ***** Finished TC001_AccountRegistration5 *****
